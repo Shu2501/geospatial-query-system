@@ -1,0 +1,217 @@
+/* =========================
+   GLOBAL STYLING
+========================= */
+
+body {
+
+    background: linear-gradient(
+        to bottom right,
+        #020617,
+        #0f172a,
+        #111827
+    );
+
+    color: white;
+
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   HEADINGS & TEXT
+========================= */
+
+h1, h2, h3, h4, h5, h6,
+p,
+strong,
+li {
+
+    color: white;
+}
+
+
+/* =========================
+   SEARCH CARD
+========================= */
+
+.search-card {
+
+    background: rgba(30, 41, 59, 0.95);
+
+    border: 1px solid #334155;
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.35);
+
+    transition: 0.3s;
+}
+
+.search-card:hover {
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   RESULT CARDS
+========================= */
+
+.result-card {
+
+    background: rgba(30, 41, 59, 0.95);
+
+    border: 1px solid #334155;
+
+    border-radius: 24px;
+
+    color: white;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.35);
+
+    transition: 0.3s;
+}
+
+.result-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================
+   INPUT BOX
+========================= */
+
+.form-control {
+
+    background: #0f172a !important;
+
+    color: white !important;
+
+    border: 1px solid #334155 !important;
+
+    border-radius: 14px !important;
+
+    padding: 14px;
+
+    font-size: 18px;
+}
+
+.form-control::placeholder {
+
+    color: #94a3b8;
+}
+
+.form-control:focus {
+
+    background: #0f172a !important;
+
+    color: white !important;
+
+    border-color: #3b82f6 !important;
+
+    box-shadow: 0px 0px 12px rgba(59, 130, 246, 0.5) !important;
+}
+
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+
+.btn-primary {
+
+    background: linear-gradient(
+        to right,
+        #2563eb,
+        #3b82f6
+    ) !important;
+
+    border: none !important;
+
+    border-radius: 14px !important;
+
+    padding-left: 24px;
+
+    padding-right: 24px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+
+    transform: scale(1.05);
+
+    background: linear-gradient(
+        to right,
+        #1d4ed8,
+        #2563eb
+    ) !important;
+
+    box-shadow: 0px 0px 20px rgba(59, 130, 246, 0.5);
+}
+
+
+/* =========================
+   DIVIDERS
+========================= */
+
+hr {
+
+    border-color: #334155;
+}
+
+
+/* =========================
+   CARD ANIMATION
+========================= */
+
+.card {
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #334155;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #475569;
+}
+
+.card h4 {
+
+    font-size: 1.4rem;
+
+    line-height: 1.5;
+
+    min-height: 90px;
+}
