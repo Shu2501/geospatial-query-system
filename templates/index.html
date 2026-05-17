@@ -102,9 +102,11 @@ function showLoader() {
 
                     name="query"
 
+                    id = "searchInput"
+
                     class="form-control form-control-lg"
 
-                    placeholder="Find hospitals in Delhi"
+                    placeholder=""
 
                     required
                 >
@@ -366,6 +368,76 @@ function showLoader() {
 <script
     src="{{ url_for('static', filename='js/location.js') }}"
 ></script>
+
+<script>
+
+const texts = [
+
+    "Find hospitals in Delhi...",
+
+    "Find cafes nearby...",
+
+    "Find restaurants in Mumbai...",
+
+    "Find pharmacies in Bengaluru...",
+
+    "Find parks nearby..."
+
+];
+
+const input = document.getElementById("searchInput");
+
+let textIndex = 0;
+
+let charIndex = 0;
+
+let isDeleting = false;
+
+function typeEffect() {
+
+    const currentText = texts[textIndex];
+
+    if (!isDeleting) {
+
+        input.setAttribute(
+            "placeholder",
+            currentText.substring(0, charIndex + 1)
+        );
+
+        charIndex++;
+
+        if (charIndex === currentText.length) {
+
+            isDeleting = true;
+
+            setTimeout(typeEffect, 1500);
+
+            return;
+        }
+
+    } else {
+
+        input.setAttribute(
+            "placeholder",
+            currentText.substring(0, charIndex - 1)
+        );
+
+        charIndex--;
+
+        if (charIndex === 0) {
+
+            isDeleting = false;
+
+            textIndex = (textIndex + 1) % texts.length;
+        }
+    }
+
+    setTimeout(typeEffect, isDeleting ? 40 : 80);
+}
+
+typeEffect();
+
+</script>
 
 <footer class ="text-center mt-5 mb-3 text-secondary">
 
