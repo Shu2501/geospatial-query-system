@@ -42,7 +42,7 @@ python app.py
 
 - Hospitals nearby
 - Restaurants in Goa
-- Tourist places in Jaipur
+- Find Parks in Jaipur
 - Train stations nearby
 - Cafes in Bangalore
 
@@ -58,6 +58,9 @@ python app.py
 
 ### Nearby Places Results
 ![Results](screenshots/results-cards.png)
+
+### Interactive map
+![Results](screenshots/interactive-map.png)
 
 ---
 
@@ -88,3 +91,4 @@ User Query → NLP Processing → Geolocation → Nearby Place Search → Intera
 - Distance filtering
 - Better animations and transitions
 - Mobile app support
+- Google maps API integration
