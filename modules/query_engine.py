@@ -13,6 +13,9 @@ SEARCH_MAPPINGS = {
 
 def search_places(location, place_type):
 
+    location = " ".join(location.split())
+    place_type = " ".join(place_type.split())
+
     # Smart keyword mapping
     if place_type in SEARCH_MAPPINGS:
 

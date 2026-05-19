@@ -1,3 +1,5 @@
+import re
+
 import spacy
 
 nlp = spacy.load("en_core_web_sm")
@@ -60,6 +62,8 @@ PLACE_TYPES = {
 
 def extract_query_data(query):
 
+    query = re.sub(r"\s+", " ", query).strip()
+
     doc = nlp(query)
 
     location = None
@@ -69,7 +73,7 @@ def extract_query_data(query):
     for ent in doc.ents:
 
         if ent.label_ in ["GPE", "LOC"]:
-            location = ent.text
+            location = ent.text.strip()
 
     #Extract place types
     query_lower = query.lower()
@@ -83,6 +87,6 @@ def extract_query_data(query):
             place_type = PLACE_TYPES[place]
     
     return {
-        "location": location,
-        "place_type": place_type
+        "location": location.strip() if location else None,
+        "place_type": place_type.strip() if place_type else None
     }
